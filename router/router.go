@@ -21,6 +21,7 @@ func GetRouter() *mux.Router {
 	router.Use(loggingMiddleWare)
 
 	router.HandleFunc("/", controller.ServerLive).Methods("GET")
+	router.HandleFunc("/signup", controller.SignUp).Methods("POST")
 
 	return router
 }
